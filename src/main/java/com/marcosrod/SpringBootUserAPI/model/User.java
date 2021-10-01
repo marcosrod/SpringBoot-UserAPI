@@ -1,8 +1,20 @@
 package com.marcosrod.SpringBootUserAPI.model;
 
-import javax.persistence.*;
+import com.marcosrod.SpringBootUserAPI.dto.UserRequest;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
+@Data
+@Builder
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "user")
 public class User {
 
@@ -10,51 +22,26 @@ public class User {
     @Id
     private int id;
 
+    @NotNull
+    @NotBlank
     @Column(name = "name")
     private String name;
 
+    @NotNull
+    @NotBlank
     @Column(name = "email")
     private String email;
 
+    @NotNull
+    @NotBlank
     @Column(name = "password")
     private String password;
 
-    public User() {
-
-    }
-
-    public User(String name, String email, String password){
-        super();
-        this.name = name;
-        this.email = email;
-        this.password = password;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public static User of(UserRequest userRequest) {
+        return User.builder()
+                .name(userRequest.getName())
+                .email(userRequest.getEmail())
+                .password(userRequest.getPassword())
+                .build();
     }
 }
