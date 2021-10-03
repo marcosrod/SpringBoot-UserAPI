@@ -2,19 +2,13 @@ package com.marcosrod.SpringBootUserAPI.controller;
 
 import com.marcosrod.SpringBootUserAPI.dto.UserRequest;
 import com.marcosrod.SpringBootUserAPI.dto.UserResponse;
-import com.marcosrod.SpringBootUserAPI.model.User;
+import com.marcosrod.SpringBootUserAPI.model.UserPage;
 import com.marcosrod.SpringBootUserAPI.repository.UserRepository;
 import com.marcosrod.SpringBootUserAPI.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Optional;
 
 @RestController
 @RequestMapping(path="api/users")
@@ -36,8 +30,8 @@ public class UserController {
     }
 
     @GetMapping
-    public Page<UserResponse> getAll(PageRequest pageRequest){
-        return userService.getAll(pageRequest);
+    public Page<UserResponse> getAll(UserPage userPage){
+        return userService.getAll(userPage);
     }
 
     @GetMapping(path="/{id}")

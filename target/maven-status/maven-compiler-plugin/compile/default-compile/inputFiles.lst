@@ -1,0 +1,8 @@
+/home/marcoskod/Marcos/Repositories/SpringBoot-UserAPI/src/main/java/com/marcosrod/SpringBootUserAPI/dto/UserRequest.java
+/home/marcoskod/Marcos/Repositories/SpringBoot-UserAPI/src/main/java/com/marcosrod/SpringBootUserAPI/repository/UserRepository.java
+/home/marcoskod/Marcos/Repositories/SpringBoot-UserAPI/src/main/java/com/marcosrod/SpringBootUserAPI/service/UserService.java
+/home/marcoskod/Marcos/Repositories/SpringBoot-UserAPI/src/main/java/com/marcosrod/SpringBootUserAPI/SpringBootUserApiApplication.java
+/home/marcoskod/Marcos/Repositories/SpringBoot-UserAPI/src/main/java/com/marcosrod/SpringBootUserAPI/model/User.java
+/home/marcoskod/Marcos/Repositories/SpringBoot-UserAPI/src/main/java/com/marcosrod/SpringBootUserAPI/exception/UserNotFoundException.java
+/home/marcoskod/Marcos/Repositories/SpringBoot-UserAPI/src/main/java/com/marcosrod/SpringBootUserAPI/controller/UserController.java
+/home/marcoskod/Marcos/Repositories/SpringBoot-UserAPI/src/main/java/com/marcosrod/SpringBootUserAPI/dto/UserResponse.java
